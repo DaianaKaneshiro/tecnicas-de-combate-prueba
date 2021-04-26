@@ -5,7 +5,8 @@ doble :: Number -> Number
 doble numero = numero + numero
 
 
---punto 1
+--PUNTO 1
+{-
 poderDeGolpe:: Number -> Number
 poderDeGolpe horas = 15 * horas
 
@@ -14,23 +15,35 @@ fortalezaDelObjetivo unObjetivo =  2 * cantLetrasNombre unObjetivo
 
 cantLetrasNombre:: String -> Number
 cantLetrasNombre nombre = length nombre
+-}
+
+poderDeGolpe = (15*)
+fortalezaDelObjetivo= (2*).length
 
 presionDeGolpe :: Number -> String -> Number
 presionDeGolpe horas unObjetivo = poderDeGolpe horas/ fortalezaDelObjetivo unObjetivo
 
 
--- punto 2
+-- PUNTO 2
 
+{-
 gomuGomu:: String -> Number
 gomuGomu unObjetivo = presionDeGolpe 180 unObjetivo
 
 golpesNormales :: String -> Number
 golpesNormales  unObjetivo= presionDeGolpe 240  unObjetivo
+-}
 
---punto 3
+gomuGomu  = presionDeGolpe 180 
 
+golpesNormales  = presionDeGolpe 240  
+
+--PUNTO 3
+ --Entiendo que no es posible usar aplicacion parcial
+ 
 objetivoDificil :: String -> Bool
 objetivoDificil unObjetivo = gomuGomu unObjetivo < 100
+
 
 objetivoAccesible :: String -> Bool
 objetivoAccesible unObjetivo = golpeNormalFocalizado unObjetivo > 200 && golpeNormalFocalizado unObjetivo < 400
